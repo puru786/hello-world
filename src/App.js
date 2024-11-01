@@ -8,7 +8,7 @@ function App() {
   // Fetch pods from Kubernetes API
   const fetchPods = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8080/api/api/v1/pods'); // Use relative URL if proxy is set
+      const response = await fetch('http://127.0.0.1:8080/api/v1/pods'); // Use relative URL if proxy is set
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
